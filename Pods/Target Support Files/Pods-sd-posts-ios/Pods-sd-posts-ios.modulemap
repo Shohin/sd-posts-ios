@@ -1,0 +1,6 @@
+framework module Pods_sd_posts_ios {
+  umbrella header "Pods-sd-posts-ios-umbrella.h"
+
+  export *
+  module * { export * }
+}

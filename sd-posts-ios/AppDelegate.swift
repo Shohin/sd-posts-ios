@@ -8,14 +8,16 @@
 
 import UIKit
 
+public private(set) var app: App!
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.initApp(application: application)
         return true
     }
 
@@ -40,7 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    private func initApp(application: UIApplication) {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        app = App(application: application, window: self.window!)
+        app.launch()
+    }
 }
 
