@@ -23,30 +23,35 @@ final public class App {
     }
     
     public func launch() {
-        self.createDB()
+        self.openDB()
         
-        self.window.rootViewController = UIViewController()
+        let initializer = PostListInitializer(worker: PostListApiWorker(repository: PostSqliteRepo()))
+        let navCon = UINavigationController(rootViewController: initializer.controller)
+        self.window.rootViewController = navCon
+        self.window.makeKeyAndVisible()
     }
     
-    private func createDB() {
+    private func openDB() {
         do {
+            self.registerFillDefDataMigr()
             self.dbQueue = try self.db.openDatabase()
-            try self.dbQueue.write { (db) in
-                var post = Post(id: nil, title: "title", author: "author", publishedAt: Date())
-                try post.insert(db)
-                
-                let posts = try Post.fetchAll(db)
-                for p in posts {
-                    print(p.id ?? -1)
-                    print(p.title)
-                    print(p.author)
-                    print(p.publishedAt)
-                }
-            }
             
             print("Database url: \(self.db.path)")
         } catch(let e) {
             fatalError("Error loading database \(e.localizedDescription)")
+        }
+    }
+    
+    private func registerFillDefDataMigr() {
+        self.db.migrator.registerMigration("defaultDatas") { (db) in
+            for i in 1...100 {
+                let title = "Post \(i)"
+                let author = "Author \(i)"
+                let date = Date(timeInterval: TimeInterval(60 * (i - 1)), since: Date())
+                var post = Post(id: nil, title: title, author: author, publishedAt: date)
+                try post.insert(db)
+                
+            }
         }
     }
 }

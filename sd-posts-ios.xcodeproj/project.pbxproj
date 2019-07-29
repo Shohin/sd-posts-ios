@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		06AE13C27340C44982721596 /* Pods_sd_posts_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238895A310685B260FEFA7E8 /* Pods_sd_posts_ios.framework */; };
+		D3133FEC22EE02D4005F631C /* PostSqliteRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3133FEB22EE02D4005F631C /* PostSqliteRecord.swift */; };
+		D32476D922EF0F9A00684F54 /* CLoadMoreDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32476D822EF0F9A00684F54 /* CLoadMoreDataTableViewCell.swift */; };
+		D32476DF22EF1E4C00684F54 /* CEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32476DE22EF1E4C00684F54 /* CEmptyView.swift */; };
+		D32476E122EF1F4300684F54 /* CReloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32476E022EF1F4300684F54 /* CReloadView.swift */; };
+		D32476E422EF1F7100684F54 /* TemplateListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32476E322EF1F7100684F54 /* TemplateListController.swift */; };
 		D336093822EC11EE00169185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336093722EC11EE00169185 /* AppDelegate.swift */; };
 		D336093F22EC11EE00169185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D336093E22EC11EE00169185 /* Assets.xcassets */; };
 		D336094222EC11EE00169185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D336094022EC11EE00169185 /* LaunchScreen.storyboard */; };
@@ -19,7 +24,6 @@
 		D336095E22EC263600169185 /* PostListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336095D22EC263600169185 /* PostListWorker.swift */; };
 		D336096022EC279000169185 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336095F22EC279000169185 /* PostDataSource.swift */; };
 		D336096222EC27B100169185 /* PostSqliteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336096122EC27B100169185 /* PostSqliteDataSource.swift */; };
-		D336096522EC282E00169185 /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336096422EC282E00169185 /* PostRepository.swift */; };
 		D336096722EC285000169185 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336096622EC285000169185 /* DataSource.swift */; };
 		D336096922EC286D00169185 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336096822EC286D00169185 /* Repository.swift */; };
 		D336096B22EC28A000169185 /* InputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336096A22EC28A000169185 /* InputData.swift */; };
@@ -33,8 +37,11 @@
 		D336098222EC2B2B00169185 /* PostListNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336098122EC2B2B00169185 /* PostListNavigator.swift */; };
 		D336098422EC2BD400169185 /* PostListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336098322EC2BD400169185 /* PostListPresenter.swift */; };
 		D336098622EC2BEE00169185 /* PostListApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D336098522EC2BEE00169185 /* PostListApiWorker.swift */; };
+		D33ECD0622EEB236007D8A4A /* BackgroundTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33ECD0522EEB236007D8A4A /* BackgroundTimer.swift */; };
+		D33F5D8122EE069000AD899A /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33F5D8022EE069000AD899A /* PostRepository.swift */; };
+		D33F5D8322EE074C00AD899A /* PostSqliteRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33F5D8222EE074C00AD899A /* PostSqliteRepo.swift */; };
 		D3E794EE22EC2C7A004AE125 /* PostListInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E794ED22EC2C7A004AE125 /* PostListInitializer.swift */; };
-		D3E794F122EC2CD2004AE125 /* PagingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E794F022EC2CD2004AE125 /* PagingControl.swift */; };
+		D3E794F122EC2CD2004AE125 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E794F022EC2CD2004AE125 /* Pagination.swift */; };
 		D3E794F322EC3D28004AE125 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E794F222EC3D28004AE125 /* App.swift */; };
 		D3E794F522EC3DCD004AE125 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E794F422EC3DCD004AE125 /* Data.swift */; };
 		D3E794F722EC3E0B004AE125 /* PostDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E794F622EC3E0B004AE125 /* PostDataExtension.swift */; };
@@ -47,6 +54,11 @@
 /* Begin PBXFileReference section */
 		238895A310685B260FEFA7E8 /* Pods_sd_posts_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sd_posts_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78FAEC919BB9DBC2E874AA8 /* Pods-sd-posts-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sd-posts-ios.debug.xcconfig"; path = "Target Support Files/Pods-sd-posts-ios/Pods-sd-posts-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		D3133FEB22EE02D4005F631C /* PostSqliteRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSqliteRecord.swift; sourceTree = "<group>"; };
+		D32476D822EF0F9A00684F54 /* CLoadMoreDataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLoadMoreDataTableViewCell.swift; sourceTree = "<group>"; };
+		D32476DE22EF1E4C00684F54 /* CEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CEmptyView.swift; sourceTree = "<group>"; };
+		D32476E022EF1F4300684F54 /* CReloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CReloadView.swift; sourceTree = "<group>"; };
+		D32476E322EF1F7100684F54 /* TemplateListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateListController.swift; sourceTree = "<group>"; };
 		D336093422EC11EE00169185 /* sd-posts-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sd-posts-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D336093722EC11EE00169185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D336093E22EC11EE00169185 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +72,6 @@
 		D336095D22EC263600169185 /* PostListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListWorker.swift; sourceTree = "<group>"; };
 		D336095F22EC279000169185 /* PostDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
 		D336096122EC27B100169185 /* PostSqliteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSqliteDataSource.swift; sourceTree = "<group>"; };
-		D336096422EC282E00169185 /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
 		D336096622EC285000169185 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		D336096822EC286D00169185 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		D336096A22EC28A000169185 /* InputData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputData.swift; sourceTree = "<group>"; };
@@ -74,8 +85,11 @@
 		D336098122EC2B2B00169185 /* PostListNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListNavigator.swift; sourceTree = "<group>"; };
 		D336098322EC2BD400169185 /* PostListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPresenter.swift; sourceTree = "<group>"; };
 		D336098522EC2BEE00169185 /* PostListApiWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListApiWorker.swift; sourceTree = "<group>"; };
+		D33ECD0522EEB236007D8A4A /* BackgroundTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTimer.swift; sourceTree = "<group>"; };
+		D33F5D8022EE069000AD899A /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
+		D33F5D8222EE074C00AD899A /* PostSqliteRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostSqliteRepo.swift; sourceTree = "<group>"; };
 		D3E794ED22EC2C7A004AE125 /* PostListInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListInitializer.swift; sourceTree = "<group>"; };
-		D3E794F022EC2CD2004AE125 /* PagingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingControl.swift; sourceTree = "<group>"; };
+		D3E794F022EC2CD2004AE125 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		D3E794F222EC3D28004AE125 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		D3E794F422EC3DCD004AE125 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D3E794F622EC3E0B004AE125 /* PostDataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataExtension.swift; sourceTree = "<group>"; };
@@ -115,6 +129,61 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D3133FE622EDFE7E005F631C /* core */ = {
+			isa = PBXGroup;
+			children = (
+				D336097022EC29B100169185 /* ui */,
+				D336096322EC27DB00169185 /* common */,
+				D336094922EC1D0700169185 /* data */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		D3133FE722EDFE97005F631C /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				D33F5D8222EE074C00AD899A /* PostSqliteRepo.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		D3133FE922EDFEC8005F631C /* post */ = {
+			isa = PBXGroup;
+			children = (
+				D336096122EC27B100169185 /* PostSqliteDataSource.swift */,
+				D3E7950522ECB859004AE125 /* PostSqliteTableConfigurator.swift */,
+				D3133FEB22EE02D4005F631C /* PostSqliteRecord.swift */,
+			);
+			path = post;
+			sourceTree = "<group>";
+		};
+		D32476D622EF0F6900684F54 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				D32476E222EF1F5800684F54 /* controller */,
+				D32476D722EF0F6F00684F54 /* view */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		D32476D722EF0F6F00684F54 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D32476E022EF1F4300684F54 /* CReloadView.swift */,
+				D32476DE22EF1E4C00684F54 /* CEmptyView.swift */,
+				D32476D822EF0F9A00684F54 /* CLoadMoreDataTableViewCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		D32476E222EF1F5800684F54 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				D32476E322EF1F7100684F54 /* TemplateListController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
 		D336092B22EC11EE00169185 = {
 			isa = PBXGroup;
 			children = (
@@ -137,8 +206,10 @@
 			isa = PBXGroup;
 			children = (
 				D336096F22EC296400169185 /* ui */,
-				D336095022EC243C00169185 /* domain */,
-				D336094922EC1D0700169185 /* data */,
+				D3133FE722EDFE97005F631C /* repo */,
+				D3E794F822EC9958004AE125 /* sqlite */,
+				D336095022EC243C00169185 /* ui logic */,
+				D3133FE622EDFE7E005F631C /* core */,
 				D3E794F222EC3D28004AE125 /* App.swift */,
 				D336093722EC11EE00169185 /* AppDelegate.swift */,
 				D336093E22EC11EE00169185 /* Assets.xcassets */,
@@ -151,7 +222,6 @@
 		D336094922EC1D0700169185 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				D3E794F822EC9958004AE125 /* sqlite */,
 				D336094F22EC243200169185 /* repository */,
 				D336094B22EC1D2D00169185 /* source */,
 				D336094A22EC1D2500169185 /* bean */,
@@ -180,19 +250,18 @@
 		D336094F22EC243200169185 /* repository */ = {
 			isa = PBXGroup;
 			children = (
+				D33F5D7F22EE068400AD899A /* post */,
 				D336096822EC286D00169185 /* Repository.swift */,
-				D336096422EC282E00169185 /* PostRepository.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
 		};
-		D336095022EC243C00169185 /* domain */ = {
+		D336095022EC243C00169185 /* ui logic */ = {
 			isa = PBXGroup;
 			children = (
-				D336096322EC27DB00169185 /* common */,
 				D336095222EC247B00169185 /* post */,
 			);
-			path = domain;
+			path = "ui logic";
 			sourceTree = "<group>";
 		};
 		D336095122EC245D00169185 /* post */ = {
@@ -200,8 +269,6 @@
 			children = (
 				D3E794F622EC3E0B004AE125 /* PostDataExtension.swift */,
 				D336095F22EC279000169185 /* PostDataSource.swift */,
-				D336096122EC27B100169185 /* PostSqliteDataSource.swift */,
-				D3E7950522ECB859004AE125 /* PostSqliteTableConfigurator.swift */,
 			);
 			path = post;
 			sourceTree = "<group>";
@@ -238,24 +305,14 @@
 			isa = PBXGroup;
 			children = (
 				D3E794EF22EC2CAE004AE125 /* util */,
-				D336097022EC29B100169185 /* ui */,
-				D336096E22EC28F100169185 /* data */,
 			);
 			path = common;
-			sourceTree = "<group>";
-		};
-		D336096E22EC28F100169185 /* data */ = {
-			isa = PBXGroup;
-			children = (
-				D336096A22EC28A000169185 /* InputData.swift */,
-				D336096C22EC28C300169185 /* Worker.swift */,
-			);
-			path = data;
 			sourceTree = "<group>";
 		};
 		D336096F22EC296400169185 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				D32476D622EF0F6900684F54 /* common */,
 				D336097922EC2AB400169185 /* post */,
 			);
 			path = ui;
@@ -264,6 +321,8 @@
 		D336097022EC29B100169185 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				D336096A22EC28A000169185 /* InputData.swift */,
+				D336096C22EC28C300169185 /* Worker.swift */,
 				D336097122EC29C700169185 /* Navigator.swift */,
 				D336097522EC2A0C00169185 /* Router.swift */,
 				D336097322EC29F600169185 /* Presenter.swift */,
@@ -283,7 +342,7 @@
 		D336097A22EC2AB900169185 /* list */ = {
 			isa = PBXGroup;
 			children = (
-				D336098022EC2B0400169185 /* domain */,
+				D336098022EC2B0400169185 /* control */,
 				D336097D22EC2AE100169185 /* view */,
 				D336097B22EC2ACA00169185 /* PostListController.swift */,
 			);
@@ -298,7 +357,7 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		D336098022EC2B0400169185 /* domain */ = {
+		D336098022EC2B0400169185 /* control */ = {
 			isa = PBXGroup;
 			children = (
 				D336098522EC2BEE00169185 /* PostListApiWorker.swift */,
@@ -306,13 +365,22 @@
 				D336098322EC2BD400169185 /* PostListPresenter.swift */,
 				D3E794ED22EC2C7A004AE125 /* PostListInitializer.swift */,
 			);
-			path = domain;
+			path = control;
+			sourceTree = "<group>";
+		};
+		D33F5D7F22EE068400AD899A /* post */ = {
+			isa = PBXGroup;
+			children = (
+				D33F5D8022EE069000AD899A /* PostRepository.swift */,
+			);
+			path = post;
 			sourceTree = "<group>";
 		};
 		D3E794EF22EC2CAE004AE125 /* util */ = {
 			isa = PBXGroup;
 			children = (
-				D3E794F022EC2CD2004AE125 /* PagingControl.swift */,
+				D3E794F022EC2CD2004AE125 /* Pagination.swift */,
+				D33ECD0522EEB236007D8A4A /* BackgroundTimer.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -320,6 +388,7 @@
 		D3E794F822EC9958004AE125 /* sqlite */ = {
 			isa = PBXGroup;
 			children = (
+				D3133FE922EDFEC8005F631C /* post */,
 				D3E7950322ECB2A3004AE125 /* SqliteTableConfigurator.swift */,
 				D3E794FD22EC9CE5004AE125 /* SqliteDataBase.swift */,
 				D3E7950722ECD610004AE125 /* SqliteFactory.swift */,
@@ -447,14 +516,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E794EE22EC2C7A004AE125 /* PostListInitializer.swift in Sources */,
+				D3133FEC22EE02D4005F631C /* PostSqliteRecord.swift in Sources */,
+				D32476DF22EF1E4C00684F54 /* CEmptyView.swift in Sources */,
 				D336096B22EC28A000169185 /* InputData.swift in Sources */,
 				D3E7950422ECB2A3004AE125 /* SqliteTableConfigurator.swift in Sources */,
 				D3E794FE22EC9CE5004AE125 /* SqliteDataBase.swift in Sources */,
 				D336096022EC279000169185 /* PostDataSource.swift in Sources */,
-				D336096522EC282E00169185 /* PostRepository.swift in Sources */,
 				D336097422EC29F600169185 /* Presenter.swift in Sources */,
 				D336097622EC2A0C00169185 /* Router.swift in Sources */,
 				D3E794F722EC3E0B004AE125 /* PostDataExtension.swift in Sources */,
+				D32476E422EF1F7100684F54 /* TemplateListController.swift in Sources */,
 				D336094D22EC1D5700169185 /* Post.swift in Sources */,
 				D3E794F522EC3DCD004AE125 /* Data.swift in Sources */,
 				D336096922EC286D00169185 /* Repository.swift in Sources */,
@@ -463,21 +534,26 @@
 				D336097C22EC2ACA00169185 /* PostListController.swift in Sources */,
 				D336095C22EC262900169185 /* PostListInputData.swift in Sources */,
 				D336095E22EC263600169185 /* PostListWorker.swift in Sources */,
-				D3E794F122EC2CD2004AE125 /* PagingControl.swift in Sources */,
+				D3E794F122EC2CD2004AE125 /* Pagination.swift in Sources */,
 				D336096722EC285000169185 /* DataSource.swift in Sources */,
 				D336095622EC249900169185 /* PostAloneWorker.swift in Sources */,
+				D32476E122EF1F4300684F54 /* CReloadView.swift in Sources */,
 				D336097F22EC2AEF00169185 /* PostTableViewCell.swift in Sources */,
 				D336098222EC2B2B00169185 /* PostListNavigator.swift in Sources */,
 				D336098622EC2BEE00169185 /* PostListApiWorker.swift in Sources */,
 				D336098422EC2BD400169185 /* PostListPresenter.swift in Sources */,
 				D3E7950822ECD610004AE125 /* SqliteFactory.swift in Sources */,
 				D336096D22EC28C300169185 /* Worker.swift in Sources */,
+				D33ECD0622EEB236007D8A4A /* BackgroundTimer.swift in Sources */,
+				D32476D922EF0F9A00684F54 /* CLoadMoreDataTableViewCell.swift in Sources */,
 				D336095A22EC261D00169185 /* PostItemInputData.swift in Sources */,
 				D336097822EC2A7500169185 /* Initializer.swift in Sources */,
 				D336095422EC248F00169185 /* PostAloneInputData.swift in Sources */,
 				D3E7950622ECB859004AE125 /* PostSqliteTableConfigurator.swift in Sources */,
 				D336096222EC27B100169185 /* PostSqliteDataSource.swift in Sources */,
+				D33F5D8322EE074C00AD899A /* PostSqliteRepo.swift in Sources */,
 				D336093822EC11EE00169185 /* AppDelegate.swift in Sources */,
+				D33F5D8122EE069000AD899A /* PostRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
