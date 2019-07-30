@@ -49,6 +49,7 @@
 		D3E7950422ECB2A3004AE125 /* SqliteTableConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7950322ECB2A3004AE125 /* SqliteTableConfigurator.swift */; };
 		D3E7950622ECB859004AE125 /* PostSqliteTableConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7950522ECB859004AE125 /* PostSqliteTableConfigurator.swift */; };
 		D3E7950822ECD610004AE125 /* SqliteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7950722ECD610004AE125 /* SqliteFactory.swift */; };
+		D3FD50F822F00C6100433C14 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FD50F722F00C6100433C14 /* AppNavigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,7 @@
 		D3E7950322ECB2A3004AE125 /* SqliteTableConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteTableConfigurator.swift; sourceTree = "<group>"; };
 		D3E7950522ECB859004AE125 /* PostSqliteTableConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSqliteTableConfigurator.swift; sourceTree = "<group>"; };
 		D3E7950722ECD610004AE125 /* SqliteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteFactory.swift; sourceTree = "<group>"; };
+		D3FD50F722F00C6100433C14 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		E11CC25D5E882D694D39B6E6 /* Pods-sd-posts-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sd-posts-ios.release.xcconfig"; path = "Target Support Files/Pods-sd-posts-ios/Pods-sd-posts-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,6 +217,7 @@
 				D336093E22EC11EE00169185 /* Assets.xcassets */,
 				D336094022EC11EE00169185 /* LaunchScreen.storyboard */,
 				D336094322EC11EE00169185 /* Info.plist */,
+				D3FD50F722F00C6100433C14 /* AppNavigator.swift */,
 			);
 			path = "sd-posts-ios";
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				D32476D922EF0F9A00684F54 /* CLoadMoreDataTableViewCell.swift in Sources */,
 				D336095A22EC261D00169185 /* PostItemInputData.swift in Sources */,
 				D336097822EC2A7500169185 /* Initializer.swift in Sources */,
+				D3FD50F822F00C6100433C14 /* AppNavigator.swift in Sources */,
 				D336095422EC248F00169185 /* PostAloneInputData.swift in Sources */,
 				D3E7950622ECB859004AE125 /* PostSqliteTableConfigurator.swift in Sources */,
 				D336096222EC27B100169185 /* PostSqliteDataSource.swift in Sources */,

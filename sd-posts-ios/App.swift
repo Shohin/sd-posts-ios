@@ -10,6 +10,7 @@ import UIKit
 import GRDB
 
 final public class App {
+    private let navigator = AppNavigator()
     public private(set) var dbQueue: DatabaseQueue!
     public let db: SqliteDataBase
     public let application: UIApplication
@@ -25,10 +26,11 @@ final public class App {
     public func launch() {
         self.openDB()
         
-        let initializer = PostListInitializer(worker: PostListApiWorker(repository: PostSqliteRepo()))
-        let navCon = UINavigationController(rootViewController: initializer.controller)
-        self.window.rootViewController = navCon
-        self.window.makeKeyAndVisible()
+        R.didNavigate { (n) in
+            print("Navigated to: \(n)")
+        }
+        
+        self.showPostList()
     }
     
     private func openDB() {
@@ -53,5 +55,15 @@ final public class App {
                 
             }
         }
+    }
+    
+    public func showPostList() {
+        let mockCon = UIViewController()
+        R.navigate(with: self.navigator, for: .postList, from: mockCon)
+    }
+    
+    public func changeWindow(rootController: UIViewController) {
+        self.window.rootViewController = rootController
+        self.window.makeKeyAndVisible()
     }
 }
